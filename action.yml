@@ -1,0 +1,18 @@
+name: "Run Step if File Changed"
+description: "Runs command only if file has changed"
+inputs:
+  gh_token:
+    description: "Your GitHub token"
+    required: true
+    default: ""
+  command:
+    description: "Command to execute if any of the files have changed"
+    required: true
+    default: ""
+  files:
+    description: "string representation of string array of partial strings to search for"
+    required: true
+    default: ""
+runs:
+  using: "node12"
+  main: "build/index.js"
