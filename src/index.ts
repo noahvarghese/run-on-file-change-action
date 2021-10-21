@@ -20,6 +20,9 @@ import { getInputFromRaw } from "./lib/input";
 
         // get all changed files
         const octokit = github.getOctokit(token);
+        // head commit
+        await octokit.rest.git.getCommit({})
+        core.
         // loop over changed files
         // if changed contains one of provided files
         // then break and trigger command
